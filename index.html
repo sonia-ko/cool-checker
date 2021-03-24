@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="icon" href="img/profile.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <footer>
+      <img class="logo" src="img/default-monochrome-white.svg" alt="">
+      <div class='buttons-area'>
+          <button  id="words-checker">Check your text</button>
+          <button id="items-checker">Check unique items in a list</button>
+      </div>
+  </footer>
+   
+   
+<!--   WELCOME AREA-->
+  
+   <div class='welcome-area'>
+       <h1>Welcome to the Cool checker!</h1>
+   
+       <p>Here, you can check your text and find out (Check your text button): </p> 
+       <ul class="main-list">
+           <li>The number of unique words;</li>
+           <li>The number of symbols;</li>
+           <li>The number of words in your text;</li>
+       </ul>
+       <p> Also, you can get the unique items from the list that you enter (Check unique items in a list button). <br> Please click on the necessary button to get this done.
+   </p>
+   
+   </div>
+   
+   <!------CHECKER OF WORDS!----->
+   
+   <div class="words-checker hidden">
+       <h2>Check the number of unique words in your text!</h2>
+   
+   <p>Enter your text here: </p>
+   
+   <textarea class='textarea-words' name="text" id="text" cols="30" rows="10">
+       
+   </textarea>
+   
+   <button id="words-submit-btn">Submit</button>
+   
+   <p class='words-result hidden'>The result is: </p>
+   
+   <p class="words-result-2 hidden">Result</p>
+   
+   </div>
+   
+   
+   
+   
+     <!------CHECKER OF ITEMS!----->
+     
+      <div class="items-checker hidden">
+      
+       <h2>Check the number of unique items</h2>
+   
+   <p>Enter your text here: </p>
+   
+   <textarea name="text" id="text-items" cols="30" rows="10">
+       
+   </textarea>
+   
+   <button id="items-submit-btn">Submit</button>
+   
+   <p class="items-result hidden">The result is: </p>
+   
+   <p class="items-result-2 hidden">Result</p>
+   </div>
+   
+   
+       
+        
+
+   <script src="script.js"></script>
+    
+</body>
+</html>
