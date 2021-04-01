@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Checker</title>
+    <title>COOL Tool</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
@@ -16,23 +16,24 @@
       <img class="logo" src="img/default-monochrome-white.svg" alt="">
       <div class='buttons-area'>
           <button  id="words-checker">Check your text</button>
-          <button id="items-checker">Check unique items in a list</button>
+          <button id="items-checker">Calculator</button>
       </div>
   </footer>
    
    
 <!--   WELCOME AREA-->
   
-   <div class='welcome-area'>
+   <div class='welcome-area hidden'>
        <h1>Welcome to the Cool checker!</h1>
    
-       <p>Here, you can check your text and find out (Check your text button): </p> 
+       <p>Here, you can check your text and find out: </p> 
        <ul class="main-list">
            <li>The number of unique words;</li>
            <li>The number of symbols;</li>
            <li>The number of words in your text;</li>
+           <li>The number of unique items in your text / list.</li>
        </ul>
-       <p> Also, you can get the unique items from the list that you enter (Check unique items in a list button). <br> Please click on the necessary button to get this done.
+       <p> Also, you can use the calculator to calculate simple operations. <br> Please click on the necessary button to get this done.
    </p>
    
    </div>
@@ -50,33 +51,88 @@
    
    <button id="words-submit-btn">Submit</button>
    
-   <p class='words-result hidden'>The result is: </p>
+   <div class='words-result hidden'>
+   <p class='words-result-2 '>The result is: </p>
    
-   <p class="words-result-2 hidden">Result</p>
-   
-   </div>
-   
-   
-   
-   
-     <!------CHECKER OF ITEMS!----->
-     
-      <div class="items-checker hidden">
+
+   <table>
       
-       <h2>Check the number of unique items</h2>
-   
-   <p>Enter your text here: </p>
-   
-   <textarea name="text" id="text-items" cols="30" rows="10">
+
        
-   </textarea>
-   
-   <button id="items-submit-btn">Submit</button>
-   
-   <p class="items-result hidden">The result is: </p>
-   
-   <p class="items-result-2 hidden">Result</p>
+       <tr>
+           <th>Text length:</th>
+           <td class="text-length-result"></td>
+       </tr>
+       
+       <tr>
+           <th>Number of unique words</th>
+           <td class="unique-words-result-numb"></td>
+       </tr>
+       
+       <tr>
+           <th>Number of words</th>
+           <td class='number-of-words-result'></td>
+       </tr>
+       
+       <tr>
+           <th>Unique words</th>
+           <td class='unique-words-result'></td>
+       </tr>
+       
+   </table>
    </div>
+   </div>
+   
+   
+  
+   
+     <!------Calculator----->
+     
+      <div class="calculator-area ">
+      
+       <h2>Cool calculator</h2>
+       
+       <div class='calculator-container'>
+          <textarea name="" id="calc-text" cols="29" rows="1"></textarea>
+           <div class='calculator-row'>
+               <button class='calculator-button' id="btn-CE">CE</button>
+           <button class='calculator-button' id="btn-C">C</button>
+           <button class='calculator-button' id="btn-delete">X</button>
+           <button class='calculator-button' id="btn-divide">/</button>
+           </div>
+           
+           <div class='calculator-row'>
+            <button class='calculator-button btn-number' id="btn-7">7</button>
+           <button class='calculator-button btn-number' id="btn-8">8</button>
+           <button class='calculator-button btn-number' id="btn-9">9</button>
+           <button class='calculator-button' id="btn-multiply">*</button>
+           </div>
+           
+           <div class='calculator-row'>
+            <button class='calculator-button btn-number' id="btn-4">4</button>
+           <button class='calculator-button btn-number' id="btn-5">5</button>
+           <button class='calculator-button btn-number' id="btn-6">6</button>
+           <button class='calculator-button' id="btn-minus">-</button>
+           </div>
+           
+                      <div class='calculator-row'>
+            <button class='calculator-button btn-number' id="btn-1">1</button>
+           <button class='calculator-button btn-number' id="btn-2">2</button>
+           <button class='calculator-button btn-number' id="btn-3">3</button>
+           <button class='calculator-button' id="btn-plus">+</button>
+           </div>
+           
+                                 <div class='calculator-row'>
+            <button class='calculator-button' id="btn-plusminus">±</button>
+           <button class='calculator-button btn-number' id="btn-0">0</button>
+           <button class='calculator-button' id="btn-dot">.</button>
+           <button class='calculator-button' id="btn-equal">=</button>
+           </div>
+           
+       </div>
+   <div class='solution'></div>
+       
+     </div>
    
    
        
