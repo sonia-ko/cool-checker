@@ -16,14 +16,14 @@
       <img class="logo" src="img/default-monochrome-white.svg" alt="">
       <div class='buttons-area'>
           <button  id="words-checker">Check your text</button>
-          <button id="items-checker">Calculator</button>
+          <button id="calculator">Calculator</button>
       </div>
   </footer>
    
    
 <!--   WELCOME AREA-->
   
-   <div class='welcome-area hidden'>
+   <div class='welcome-area'>
        <h1>Welcome to the Cool checker!</h1>
    
        <p>Here, you can check your text and find out: </p> 
@@ -88,16 +88,20 @@
    
      <!------Calculator----->
      
-      <div class="calculator-area ">
+      <div class="calculator-area hidden">
       
        <h2>Cool calculator</h2>
        
        <div class='calculator-container'>
-          <textarea name="" id="calc-text" cols="29" rows="1"></textarea>
+         <div class='calculator-display'>
+             <div class='existing-value'></div>
+             <div id="input-area" class='input-area'></div>
+         </div>
            <div class='calculator-row'>
-               <button class='calculator-button' id="btn-CE">CE</button>
+           <button class='calculator-button' id="btn-percent">%</button>
+           <button class='calculator-button' id="btn-CE">CE</button>
            <button class='calculator-button' id="btn-C">C</button>
-           <button class='calculator-button' id="btn-delete">X</button>
+           
            <button class='calculator-button' id="btn-divide">/</button>
            </div>
            
@@ -133,12 +137,14 @@
    <div class='solution'></div>
        
      </div>
-   
+
    
        
         
 
    <script src="script.js"></script>
+   <script src="calculator.js"></script>
+   <script src="text-checker.js"></script>
     
 </body>
 </html>

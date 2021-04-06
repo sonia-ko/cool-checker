@@ -176,14 +176,36 @@ th, td{
     box-sizing: border-box;
 }
 
-.calculator-container textarea{
+.calculator-container .input-area{
 /*    width: 28rem;*/
-    margin-left: 0.15rem;
+    display: block;
+    font-family: 'Crimson Text', serif;
+    font-size: 3rem;
+    border: #dedfff;
+    background-color: #dedfff;
+    width: 100%;
     height: 3rem;
+    text-align: right;
+    
+}
+
+.existing-value{
+    display: block;
     font-family: 'Crimson Text', serif;
     font-size: 2rem;
+    height: 2rem;
+    text-align: right;
+     
+}
+
+
+
+.calculator-display{
+    width: 28.30rem;
+    margin: 0.15rem;
+    font-family: 'Crimson Text', serif;
     padding: 0.5em;
     background-color: #dedfff;
     border: #dedfff;
+    display: block;
 }
-
