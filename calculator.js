@@ -41,12 +41,16 @@ let operationCompleted = false;
     
     for (const btn of btns0to9) {
         btn.addEventListener('click', function(){
-            if(valueBottom === 0 || valueBottom === '0' || valueBottom === ''){
-                valueBottom = btn.textContent;
-            } else{
-                valueBottom = valueBottom + btn.textContent;
-            }
-        valueBottomUI.textContent = valueBottom;
+          if(!operationCompleted)  {
+              updateNumberUI(btn);
+          }else{
+              result = 0;
+             valueTop = '';
+              valueTopUI.textContent = '';
+              updateNumberUI(btn);
+              operationCompleted  = false;
+          }
+            
         })
     }
 
@@ -62,7 +66,7 @@ let operationCompleted = false;
     
     for (const btn of operationSymb) {
         btn.addEventListener('click', function(){
-        
+        operationCompleted  = false;
         valueTopUI.textContent = valueTop + btn.textContent;
         valueBottomUI.textContent = '0';
         result = 0;
@@ -117,6 +121,7 @@ let operationCompleted = false;
         valueBottomUI.textContent = result;
         valueTop = result;
         valueBottom = 0;
+            operationCompleted = true;
         }
         
         
@@ -142,6 +147,8 @@ let operationCompleted = false;
             result = eval(`${valueTop} ${activeSymbol} ${percentages}`);
             valueBottomUI.textContent = result;
             valueTopUI.textContent = `${valueTop} ${activeSymbol} ${percentages}`;
+            valueTop = result;
+            valueBottom = '';
         }else{
             
         }
@@ -191,6 +198,15 @@ let operationCompleted = false;
         };
         valueBottomUI.textContent = value;
         return value;
+    }
+    
+    function updateNumberUI(btn){
+        if(valueBottom === 0 || valueBottom === '0' || valueBottom === ''){
+                valueBottom = btn.textContent;
+            } else{
+                valueBottom = valueBottom + btn.textContent;
+            }
+        valueBottomUI.textContent = valueBottom;
     }
 })();
 

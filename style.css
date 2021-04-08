@@ -161,7 +161,7 @@ th, td{
 .calculator-container{
    display: block; 
     margin: 0 auto;
-    width: 80%;
+    width: 50%;
     
 }
 
@@ -208,4 +208,39 @@ th, td{
     background-color: #dedfff;
     border: #dedfff;
     display: block;
+}
+
+.calculator-app-container{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin:  0 auto;
+}
+
+.calculator-history{
+    width: 50%;
+    font-size: 1.3rem;
+}
+
+.history-item1{
+    background-color: #dedfff;
+    padding: 1rem;
+    margin: 0.3rem;
+}
+
+h3{
+    background-color: #cecfeb;
+     padding: 1rem;
+    margin: 0.3rem;
+}
+
+.trash-icon{
+    width: 1rem;
+}
+
+.history-row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
