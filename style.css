@@ -161,7 +161,7 @@ th, td{
 .calculator-container{
    display: block; 
     margin: 0 auto;
-    width: 50%;
+
     
 }
 
@@ -213,14 +213,18 @@ th, td{
 .calculator-app-container{
     display: flex;
     width: 90%;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     margin:  0 auto;
+    align-self: flex-end;
 }
 
 .calculator-history{
-    width: 50%;
+    width: 60%;
     font-size: 1.3rem;
+    align-self: flex-start;
+    height: 5.45rem;
+    margin: 0.15rem 0;
 }
 
 .history-item1{
@@ -231,16 +235,71 @@ th, td{
 
 h3{
     background-color: #cecfeb;
-     padding: 1rem;
-    margin: 0.3rem;
+     padding: 1.2rem 1rem;
+     margin: 0 0.3rem 0.3rem 0.3rem;
 }
 
 .trash-icon{
-    width: 1rem;
+    width: 1.5rem;
+    padding-right: 1rem;
+/*    background-image: url(img/2907762.png);*/
+    opacity: 0.6;
+}
+
+.trash-icon:hover{
+    opacity: 1;
 }
 
 .history-row{
     display: flex;
-    width: 100%;
     justify-content: space-between;
+    align-items: center;
+    background-color: #dedfff;
+    margin: 0 0.3rem;
+}
+
+.history-row + .history-row{
+    margin-top: 0.2rem;
+    
+}
+.time-and-remove-part{
+    display: flex;
+    align-items: center;
+}
+.time{
+    padding-right: 1em;
+}
+.time-delete-row{
+    background-color: #dedfff;
+    color: #6a7475;
+}
+
+.history-area{
+    max-height: 28.45rem;
+    display: block;
+    overflow-y: scroll;
+    width: 99%;
+}
+
+/* scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+margin-top: 5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #dedfff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4e4e66;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #38384a;
 }

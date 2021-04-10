@@ -4,6 +4,7 @@
 const valueTopUI = document.querySelector('.existing-value');
 const valueBottomUI = document.getElementById('input-area');
 const operationsLogs = [];
+let currentOperation = '';
     
 const btnCE = document.getElementById('btn-CE');
 const btnC = document.getElementById('btn-C');
@@ -29,12 +30,19 @@ const btn0 = document.getElementById('btn-0');
 const btns0to9 = [btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9];
     
 const operationSymb  = [btnPlus, btnMinus, btnMultiply, btnDivide];
+    
+// history section 
+    
+const deleteOperationButtons = [];
+
+const historyRow = document.querySelector('.history-area');
 
 let valueTop = 0; // the value that is shown at the top
 let valueBottom = ''; // the value that is shown at the bottom
 let result = 0;
 let activeSymbol = ''; // can be + - / *
 let operationCompleted = false;
+    
 
     
 // a user clicks on the button 0 - 9 
@@ -113,15 +121,21 @@ let operationCompleted = false;
 // a user clicks on the button =
     
     btnEqual.addEventListener('click', function(){
-        handleCalculation();
-        if (result === Infinity) {
+        
+        if(valueTopUI.textContent !== '' && !operationCompleted){
+            handleCalculation();
+            
+            if (result === Infinity) {
             showInfinityWarning();
         }else{
         valueTopUI.textContent = `${valueTop} ${activeSymbol} ${valueBottom} =`;
         valueBottomUI.textContent = result;
         valueTop = result;
         valueBottom = 0;
-            operationCompleted = true;
+        operationCompleted = true;
+            
+            addOperationToTheHistory();
+        } 
         }
         
         
@@ -154,6 +168,13 @@ let operationCompleted = false;
         }
     })
     
+    // a user deletes the item from the history:
+
+    for(const img of deleteOperationButtons) {
+        img.addEventListener('click', function(){
+            console.log('BTN CLICK!')
+    })}
+
     // UPDATE UI
     
     function updateCalcUI() {
@@ -177,7 +198,7 @@ let operationCompleted = false;
     
     function handleCalculation() {
         result = eval(`${valueTop} ${activeSymbol} ${valueBottom}`);
-        console.log(typeof result);
+         
         
     }
     
@@ -208,5 +229,43 @@ let operationCompleted = false;
             }
         valueBottomUI.textContent = valueBottom;
     }
+    
+    function addOperationToTheHistory(){
+        let currentOperation = valueTopUI.textContent + ' ' + valueBottomUI.textContent;
+        operationsLogs.push(currentOperation);
+        let dateAndTime = new Date();
+        const date = `${dateAndTime.getDate()}`.padStart(2, 0);
+        const month = `${dateAndTime.getMonth() + 1}`.padStart(2, 0);
+        const hour = `${dateAndTime.getHours()}`.padStart(2, 0);
+        const minutes = `${dateAndTime.getMinutes()}`.padStart(2, 0);
+        const seconds = `${dateAndTime.getSeconds()}`.padStart(2, 0);
+        const timeStr = `${date}.${month}, ${hour}:${minutes}:${seconds}`;
+        console.log(currentOperation, timeStr);
+        
+        const html =  `<div class='history-row' id="row-${operationsLogs.length - 1}">
+          
+          <div class='history-item1'> ${currentOperation} </div>
+          <div class=time-delete-row>
+            <div class='time-and-remove-part'>
+                <span class='time'>${timeStr}</span>
+                <span class='delete'><img class="trash-icon" id="del-btn-${operationsLogs.length - 1}" src="img/2907762.png" alt=""></span>
+            </div>
+        </div> </div>`;
+         
+        historyRow.insertAdjacentHTML('afterbegin', html);
+     
+        const el = document.getElementById(`del-btn-${operationsLogs.length - 1}`);
+        
+        el.addEventListener('click', function(){
+           let el = document.getElementById(`row-${operationsLogs.length - 1}`);
+            el.remove();
+        });
+        
+        
+    }
+    
+
+ 
+      
 })();
 

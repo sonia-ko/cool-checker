@@ -33,7 +33,7 @@ openWordChecker.addEventListener('click', function(){
 function resetApp() {
     welcomeArea.classList.remove('hidden');
     wordsCheckerArea.classList.add('hidden');
-    openCalculator.classList.add('hidden');
+    calculatorArea.classList.add('hidden');
 }
 
 // a user opens calculator
