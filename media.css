@@ -1,0 +1,272 @@
+/*Default CSS layout for narrow screens*/
+
+@media (max-width: 420px), 
+{
+  /*CSS for medium width screens*/
+   
+    body{
+        width:100%;
+    }
+
+    p{
+    font-size: 1.2rem;
+    color: #3d3d39;
+    }
+
+    .menu-btn{
+    width: 8rem;
+    height: 6rem;
+    }
+button{
+    display: block;
+    margin: 0 1rem;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.3rem;
+    padding: 0.5em;
+    border: #dedfff;
+}
+
+button:hover{
+    background-color: #35365c;
+    border: #35365c;
+    color: aliceblue;
+}
+
+.btn-clicked{
+    text-shadow: #7072a1 1px 0 10px;
+    background-color: #bbbdfa;
+}
+
+.hidden{
+    display: none;
+}
+
+/* Welcome area */
+
+.welcome-area{
+    width: 90%;
+    margin: 3em auto;
+    padding: 2em 0;
+}
+
+.welcome-area p{
+    width: 50%;
+    text-align: center;
+    margin: 1em auto 0 auto;
+}
+
+.main-list{
+    width: 50%;
+    text-align: center;
+    margin: 1em auto;
+    list-style-position: inside;
+    font-size: 1.5rem;
+    color: #3d3d39;
+    list-style-type: square;
+}
+/* FOOTER AREA */
+
+footer{
+    width: 90%;
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 25%;
+}
+
+.buttons-area{
+    display: flex;
+    align-items: center;
+    
+}
+
+.checker-active{
+    
+}
+
+/* WORDS CHECKER */
+
+.words-checker, .items-checker {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2em;
+}
+
+.words-checker p, .items-checker p{
+    text-align: center;
+}
+
+.words-checker h2, .items-checker h2{
+    text-align: center;
+}
+
+.words-checker textarea, .items-checker textarea{
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2em;
+}
+
+.words-checker button,.items-checker button {
+    margin: 1em auto 0 auto;
+    
+}
+
+.words-result-2{
+    font-size: 1.5rem;
+    text-shadow: aliceblue 1px 0 10px;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+    text-align: left;
+  margin: 1em auto;
+    color: #3d3d39;
+}
+
+th, td{
+    padding: 0.25em;
+    font-size: 1.2rem;
+    border: 1px solid black;
+}
+
+/*CALCULATOR*/
+
+.calculator-container{
+   display: block; 
+    margin: 0 auto;
+
+    
+}
+
+.calculator-row{
+    display: flex;
+}
+
+.calculator-row button{
+    width: 7rem;
+    height: 5rem;
+    margin: 0.15em;
+    box-sizing: border-box;
+}
+
+.calculator-container .input-area{
+/*    width: 28rem;*/
+    display: block;
+    font-family: 'Crimson Text', serif;
+    font-size: 3rem;
+    border: #dedfff;
+    background-color: #dedfff;
+    width: 100%;
+    height: 3rem;
+    text-align: right;
+    
+}
+
+.existing-value{
+    display: block;
+    font-family: 'Crimson Text', serif;
+    font-size: 2rem;
+    height: 2rem;
+    text-align: right;
+     
+}
+
+
+
+.calculator-display{
+    width: 28.30rem;
+    margin: 0.15rem;
+    font-family: 'Crimson Text', serif;
+    padding: 0.5em;
+    background-color: #dedfff;
+    border: #dedfff;
+    display: block;
+}
+
+.calculator-app-container{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin:  0 auto;
+    align-self: flex-end;
+}
+
+.calculator-history{
+    width: 60%;
+    font-size: 1.3rem;
+    align-self: flex-start;
+    height: 5.45rem;
+    margin: 0.15rem 0;
+}
+
+.history-item1{
+    background-color: #dedfff;
+    padding: 1rem;
+    margin: 0.3rem;
+}
+
+h3{
+    background-color: #cecfeb;
+     padding: 1.2rem 1rem;
+     margin: 0 0.3rem 0.3rem 0.3rem;
+}
+
+.trash-icon{
+    width: 1.5rem;
+    padding-right: 1rem;
+/*    background-image: url(img/2907762.png);*/
+    opacity: 0.6;
+}
+
+.trash-icon:hover{
+    opacity: 1;
+}
+
+.history-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dedfff;
+    margin: 0 0.3rem;
+}
+
+.history-row + .history-row{
+    margin-top: 0.2rem;
+    
+}
+.time-and-remove-part{
+    display: flex;
+    align-items: center;
+}
+.time{
+    padding-right: 1em;
+}
+.time-delete-row{
+    background-color: #dedfff;
+    color: #6a7475;
+}
+
+.history-area{
+    max-height: 28.45rem;
+    display: block;
+    overflow-y: scroll;
+    width: 99%;
+}
+
+
+}
+
+
+ 
+@media (max-width: 1000px) {
+  /*CSS for wide screens*/
+
+}

@@ -10,6 +10,7 @@ background-size: cover;
 }
 body{
     margin: 0 auto;
+   padding: 0;
 }
 
 h1, h2{
@@ -36,6 +37,9 @@ textarea{
     
 }
 
+.menu-btn{
+    width: 12rem;
+}
 button{
     display: block;
     margin: 0 1em;
@@ -59,6 +63,88 @@ button:hover{
 
 .hidden{
     display: none;
+}
+
+/* MENU */
+
+.menu-container{
+    cursor: pointer;
+    display: inline-block;
+}
+.menu-icon-bar{
+  width: 2.3rem;
+  height: 0.3rem;
+  background-color: aliceblue;
+  margin: 0.45rem 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color:   #35365c;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 5rem; /* Place content from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  text-decoration: none;
+  font-size: 25px;
+  color: #dedfff;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #acaee3;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
 /* Welcome area */
@@ -91,15 +177,17 @@ footer{
     margin: 1em auto;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .logo{
-    width: 25%;
+    width: 30%;
 }
 
 .buttons-area{
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     
 }
 

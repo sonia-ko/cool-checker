@@ -14,16 +14,35 @@
   
   <footer>
       <img class="logo" src="img/default-monochrome-white.svg" alt="">
-      <div class='buttons-area'>
-          <button  id="words-checker">Check your text</button>
-          <button id="calculator">Calculator</button>
-      </div>
+      
+      <nav>
+          <div id="mySidenav" class="sidenav">
+  <a href="#" class="close-menu-btn">&times;</a>
+  <a href="#" id='date-and-time-checker'>Date and Time checker (TBR) </a>
+  <a href="#"  id="words-checker">Text checker</a>
+  <a href="#" id="calculator">Calculator</a>
+ 
+</div>
+
+<!-- Use any element to open the sidenav -->
+<div class='menu-container'>
+    <div class='bar1 menu-icon-bar'></div>
+    <div class='bar2 menu-icon-bar'></div>
+    <div class='bar3 menu-icon-bar'></div>
+</div>
+ 
+
+     
+     
+      </nav>
+      
+
   </footer>
    
    
 <!--   WELCOME AREA-->
-  
-   <div class='welcome-area'>
+  <div id='main'>
+      <div class='welcome-area'>
        <h1>Welcome to the Cool checker!</h1>
    
        <p>Here, you can check your text and find out: </p> 
@@ -165,8 +184,11 @@
     
 
    
-       
-        
+    
+      
+  </div>
+   
+
 
    <script src="script.js"></script>
    <script src="calculator.js"></script>
