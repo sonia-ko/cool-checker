@@ -18,9 +18,14 @@
       <nav>
           <div id="mySidenav" class="sidenav">
   <a href="#" class="close-menu-btn">&times;</a>
-  <a href="#" id='date-and-time-checker'>Date and Time checker (TBR) </a>
-  <a href="#"  id="words-checker">Text checker</a>
-  <a href="#" id="calculator">Calculator</a>
+  <a href="#" class="nav-item" id="calculator">Calculator</a>
+  <a href="#" class="nav-item" id="words-checker">Text checker</a>
+  <a href="#" class="nav-item" id='time-in-countries-btn'>Time in different countries (TBR)</a>
+  <a href="#" class="nav-item" id='days-of-living-btn'>How many days do you live? (TBR)</a>
+  <a href="#" class="nav-item" id='duration-checker-btn'>Duration between dates (TBR)</a>
+  <a href="#" class="nav-item" id='task-tracker'>Task tracker (TBR)</a>
+  
+  
  
 </div>
 
@@ -42,7 +47,7 @@
    
 <!--   WELCOME AREA-->
   <div id='main'>
-      <div class='welcome-area'>
+      <div class='welcome-area hidden'>
        <h1>Welcome to the Cool checker!</h1>
    
        <p>Here, you can check your text and find out: </p> 
@@ -182,6 +187,17 @@
          </div>
      
     
+    
+    <div id='task-tracker-area'> 
+    <h2>Use this easy tool to track your tasks!</h2>
+    <div class='task-tracker-box'>
+        <div class='tracker-btns-container'>
+            <div class='start-tracking-btn'><img  src="img/start-tracker.png" class='tracker-btn img-start' alt=""></div> 
+        <div class='start-tracking-btn'><img  src="img/pause-tracker.png" class='tracker-btn img-start' alt=""></div> 
+        <div class='start-tracking-btn'><img  src="img/stop-tracker.png" class='tracker-btn img-start' alt=""></div> 
+        </div>
+    </div>
+    </div>
 
    
     
@@ -193,6 +209,7 @@
    <script src="script.js"></script>
    <script src="calculator.js"></script>
    <script src="text-checker.js"></script>
+   <script src="task-tracker.js"></script>
     
 </body>
 </html>

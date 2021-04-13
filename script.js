@@ -11,16 +11,33 @@ const openCalculator = document.getElementById('calculator');
 const menuIcon = document.querySelector('.menu-container');
 const closeMenuBtn = document.querySelector('.close-menu-btn');
 let menuOpened = false;
+const sideNavigation = document.querySelector('.sidenav');
 
 
 let operation;
+
+// fade effect for the menu links
+
+const handleHover = function(e) {
+    if (e.target.classList.contains('nav-item')){
+        const activeItem = e.target;
+        const siblings = activeItem.closest('.sidenav').querySelectorAll('.nav-item');
+        console.log(siblings);
+        siblings.forEach(el => {
+            if (el !== e.target) el.style.opacity = this;
+        })
+    }
+};
+
+sideNavigation.addEventListener('mouseover', handleHover.bind(0.2));
+sideNavigation.addEventListener('mouseout', handleHover.bind(1));
 
 // a user opens the menu icon
 menuIcon.addEventListener('click', function(){
     
  if(menuOpened === false){
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("mySidenav").style.width = "23%";
+  document.getElementById("main").style.marginLeft = "23%";
   menuOpened = true;
   menuIcon.classList.toggle("change");
     }else{
@@ -54,6 +71,7 @@ openWordChecker.addEventListener('click', function(){
     document.querySelector('.textarea-words').value = '';
     calculatorArea.classList.add('hidden');
     openWordChecker.classList.add('btn-clicked');
+    closeNav();
 } );
 
 
@@ -61,6 +79,7 @@ function resetApp() {
     welcomeArea.classList.remove('hidden');
     wordsCheckerArea.classList.add('hidden');
     calculatorArea.classList.add('hidden');
+    closeNav();
 }
 
 // a user opens calculator
@@ -72,5 +91,6 @@ openCalculator.addEventListener('click', function(){
     welcomeArea.classList.add('hidden');
     wordsCheckerArea.classList.add('hidden');
     calculatorArea.classList.remove('hidden');
+    closeNav();
  
 });

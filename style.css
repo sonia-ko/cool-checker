@@ -57,8 +57,10 @@ button:hover{
 }
 
 .btn-clicked{
-    text-shadow: #7072a1 1px 0 10px;
+/*
+     text-shadow: #7072a1 1px 0 10px;
     background-color: #bbbdfa;
+*/
 }
 
 .hidden{
@@ -115,7 +117,7 @@ button:hover{
 .sidenav a {
   padding: 0.5rem 0.5rem 0.5rem 2rem;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 1.5rem;
   color: #dedfff;
   display: block;
   transition: 0.3s;
@@ -130,15 +132,15 @@ button:hover{
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  right: 2rem;
+  font-size: 5rem;
+  margin-left: 4rem;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s;
-  padding: 20px;
+  padding: 1.5rem;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -390,4 +392,16 @@ margin-top: 5rem;
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #38384a;
+}
+
+
+/* ------------ TASK TRACKER ------------------- */
+
+.tracker-btn{
+    width: 4rem;
+}
+
+.tracker-btns-container {
+    display: flex;
+    border: 1px solid black;
 }
