@@ -1,174 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>COOL Tool</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
-    <link rel="icon" href="img/profile.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-</head>
-<body>
-  
-  <footer>
-      <img class="logo" src="img/default-monochrome-white.svg" alt="">
-      
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+    <link rel="icon" href="img/profile.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <footer>
+      <img class="logo" src="img/default-monochrome-white.svg" alt="" />
+
       <nav>
-          <div id="mySidenav" class="sidenav">
-  <a href="#" class="close-menu-btn">&times;</a>
-  <a href="#" class="nav-item" id="calculator">Calculator</a>
-  <a href="#" class="nav-item" id="words-checker">Text checker</a>
-  <a href="#" class="nav-item" id='time-in-countries-btn'>Time in different countries (TBR)</a>
-  <a href="#" class="nav-item" id='days-of-living-btn'>How many days do you live? (TBR)</a>
-  <a href="#" class="nav-item" id='duration-checker-btn'>Duration between dates (TBR)</a>
-  <a href="#" class="nav-item" id='task-tracker'>Task tracker (TBR)</a>
-  
-  
- 
-</div>
-
-<!-- Use any element to open the sidenav -->
-<div class='menu-container'>
-    <div class='bar1 menu-icon-bar'></div>
-    <div class='bar2 menu-icon-bar'></div>
-    <div class='bar3 menu-icon-bar'></div>
-</div>
- 
-
-     
-     
-      </nav>
-      
-
-  </footer>
-   
-   
-<!--   WELCOME AREA-->
-  <div id='main'>
-      <div class='welcome-area hidden'>
-       <h1>Welcome to the Cool checker!</h1>
-   
-       <p>Here, you can check your text and find out: </p> 
-       <ul class="main-list">
-           <li>The number of unique words;</li>
-           <li>The number of symbols;</li>
-           <li>The number of words in your text;</li>
-           <li>The number of unique items in your text / list.</li>
-       </ul>
-       <p> Also, you can use the calculator to calculate simple operations. <br> Please click on the necessary button to get this done.
-   </p>
-   
-   </div>
-   
-   <!------CHECKER OF WORDS!----->
-   
-   <div class="words-checker hidden">
-       <h2>Check the number of unique words in your text!</h2>
-   
-   <p>Enter your text here: </p>
-   
-   <textarea class='textarea-words' name="text" id="text" cols="30" rows="10">
-       
-   </textarea>
-   
-   <button id="words-submit-btn">Submit</button>
-   
-   <div class='words-result hidden'>
-   <p class='words-result-2 '>The result is: </p>
-   
-
-   <table>
-      
-
-       
-       <tr>
-           <th>Text length:</th>
-           <td class="text-length-result"></td>
-       </tr>
-       
-       <tr>
-           <th>Number of unique words</th>
-           <td class="unique-words-result-numb"></td>
-       </tr>
-       
-       <tr>
-           <th>Number of words</th>
-           <td class='number-of-words-result'></td>
-       </tr>
-       
-       <tr>
-           <th>Unique words</th>
-           <td class='unique-words-result'></td>
-       </tr>
-       
-   </table>
-   </div>
-   </div>
-   
-   
-  
-   
-     <!------Calculator----->
-     
-      <div class="calculator-area hidden">
-      
-       <h2>Cool calculator</h2>
-       
-       <div class='calculator-app-container'>
-           
-         <!--           Calculator itself-->
-         <div class='calculator-container'>
-         <div class='calculator-display'>
-             <div class='existing-value'></div>
-             <div id="input-area" class='input-area'></div>
-         </div>
-           <div class='calculator-row'>
-           <button class='calculator-button' id="btn-percent">%</button>
-           <button class='calculator-button' id="btn-CE">CE</button>
-           <button class='calculator-button' id="btn-C">C</button>
-           
-           <button class='calculator-button' id="btn-divide">/</button>
-           </div>
-           
-           <div class='calculator-row'>
-            <button class='calculator-button btn-number' id="btn-7">7</button>
-           <button class='calculator-button btn-number' id="btn-8">8</button>
-           <button class='calculator-button btn-number' id="btn-9">9</button>
-           <button class='calculator-button' id="btn-multiply">*</button>
-           </div>
-           
-           <div class='calculator-row'>
-            <button class='calculator-button btn-number' id="btn-4">4</button>
-           <button class='calculator-button btn-number' id="btn-5">5</button>
-           <button class='calculator-button btn-number' id="btn-6">6</button>
-           <button class='calculator-button' id="btn-minus">-</button>
-           </div>
-           
-                      <div class='calculator-row'>
-            <button class='calculator-button btn-number' id="btn-1">1</button>
-           <button class='calculator-button btn-number' id="btn-2">2</button>
-           <button class='calculator-button btn-number' id="btn-3">3</button>
-           <button class='calculator-button' id="btn-plus">+</button>
-           </div>
-           
-                                 <div class='calculator-row'>
-            <button class='calculator-button' id="btn-plusminus">±</button>
-           <button class='calculator-button btn-number' id="btn-0">0</button>
-           <button class='calculator-button' id="btn-dot">.</button>
-           <button class='calculator-button' id="btn-equal">=</button>
-           </div>
-           
-       </div>
-       
-<!--       History section-->
-      <div class='calculator-history'>
-          <h3>History:</h3>
+        <div id="mySidenav" class="sidenav">
+          <a href="#" class="close-menu-btn">&times;</a>
+          <a href="#" class="nav-item" id="calculator">Calculator</a>
+          <a href="#" class="nav-item" id="words-checker">Text checker</a>
+          <a href="#" class="nav-item" id="task-tracker-btn">Task tracker</a>
+          <a href="#" class="nav-item" id="time-in-countries-btn"
+            >Time in different countries (TBR)</a
+          >
+          <a href="#" class="nav-item" id="days-of-living-btn"
+            >How many days do you live? (TBR)</a
+          >
+          <a href="#" class="nav-item" id="duration-checker-btn"
+            >Duration between dates (TBR)</a
+          >
           
-          <div class='history-area'> 
-  
-<!--
+        </div>
+
+        <!-- Use any element to open the sidenav -->
+        <div class="menu-container">
+          <div class="bar1 menu-icon-bar"></div>
+          <div class="bar2 menu-icon-bar"></div>
+          <div class="bar3 menu-icon-bar"></div>
+        </div>
+      </nav>
+    </footer>
+
+    <!--   WELCOME AREA-->
+    <div id="main">
+      <div class="welcome-area">
+        <h1>Welcome to the Cool checker!</h1>
+
+        <p>Here, you can check your text and find out:</p>
+        <ul class="main-list">
+          <li>The number of unique words;</li>
+          <li>The number of symbols;</li>
+          <li>The number of words in your text;</li>
+          <li>The number of unique items in your text / list.</li>
+        </ul>
+        <p>
+          Also, you can use the calculator to calculate simple operations.
+          <br />
+          Please click on the necessary button to get this done.
+        </p>
+      </div>
+
+      <!------CHECKER OF WORDS!----->
+
+      <div class="words-checker hidden">
+        <h2>Check the number of unique words in your text!</h2>
+
+        <p>Enter your text here:</p>
+
+        <textarea
+          class="textarea-words"
+          name="text"
+          id="text"
+          cols="30"
+          rows="10"
+        >
+        </textarea>
+
+        <button id="words-submit-btn">Submit</button>
+
+        <div class="words-result hidden">
+          <p class="words-result-2">The result is:</p>
+
+          <table>
+            <tr>
+              <th>Text length:</th>
+              <td class="text-length-result"></td>
+            </tr>
+
+            <tr>
+              <th>Number of unique words</th>
+              <td class="unique-words-result-numb"></td>
+            </tr>
+
+            <tr>
+              <th>Number of words</th>
+              <td class="number-of-words-result"></td>
+            </tr>
+
+            <tr>
+              <th>Unique words</th>
+              <td class="unique-words-result"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!------Calculator----->
+
+      <div class="calculator-area hidden">
+        <h2>Cool calculator</h2>
+
+        <div class="calculator-app-container">
+          <!--           Calculator itself-->
+          <div class="calculator-container">
+            <div class="calculator-display">
+              <div class="existing-value"></div>
+              <div id="input-area" class="input-area"></div>
+            </div>
+            <div class="calculator-row">
+              <button class="calculator-button" id="btn-percent">%</button>
+              <button class="calculator-button" id="btn-CE">CE</button>
+              <button class="calculator-button" id="btn-C">C</button>
+
+              <button class="calculator-button" id="btn-divide">/</button>
+            </div>
+
+            <div class="calculator-row">
+              <button class="calculator-button btn-number" id="btn-7">7</button>
+              <button class="calculator-button btn-number" id="btn-8">8</button>
+              <button class="calculator-button btn-number" id="btn-9">9</button>
+              <button class="calculator-button" id="btn-multiply">*</button>
+            </div>
+
+            <div class="calculator-row">
+              <button class="calculator-button btn-number" id="btn-4">4</button>
+              <button class="calculator-button btn-number" id="btn-5">5</button>
+              <button class="calculator-button btn-number" id="btn-6">6</button>
+              <button class="calculator-button" id="btn-minus">-</button>
+            </div>
+
+            <div class="calculator-row">
+              <button class="calculator-button btn-number" id="btn-1">1</button>
+              <button class="calculator-button btn-number" id="btn-2">2</button>
+              <button class="calculator-button btn-number" id="btn-3">3</button>
+              <button class="calculator-button" id="btn-plus">+</button>
+            </div>
+
+            <div class="calculator-row">
+              <button class="calculator-button" id="btn-plusminus">±</button>
+              <button class="calculator-button btn-number" id="btn-0">0</button>
+              <button class="calculator-button" id="btn-dot">.</button>
+              <button class="calculator-button" id="btn-equal">=</button>
+            </div>
+          </div>
+
+          <!--       History section-->
+          <div class="calculator-history">
+            <h3>History:</h3>
+
+            <div class="history-area">
+              <!--
          <div class='history-row'>
           
           <div class='history-item1'>20+30 = 50  </div>
@@ -179,37 +173,79 @@
             </div>
         </div> </div>
 -->
-          
-          
+            </div>
           </div>
-           </div>
-          </div>
-         </div>
-     
-    
-    
-    <div id='task-tracker-area'> 
-    <h2>Use this easy tool to track your tasks!</h2>
-    <div class='task-tracker-box'>
-        <div class='tracker-btns-container'>
-            <div class='start-tracking-btn'><img  src="img/start-tracker.png" class='tracker-btn img-start' alt=""></div> 
-        <div class='start-tracking-btn'><img  src="img/pause-tracker.png" class='tracker-btn img-start' alt=""></div> 
-        <div class='start-tracking-btn'><img  src="img/stop-tracker.png" class='tracker-btn img-start' alt=""></div> 
         </div>
-    </div>
-    </div>
+      </div>
 
-   
-    
-      
-  </div>
-   
+      <!-- Task tracker -->
 
+      <div id="task-tracker-area" class='hidden'>
+        <h2>Use this easy tool to track your tasks!</h2>
+        <div class="tracker--tool">
+          <div class="tracker">
+            <p>Click on the button to start tracking your task:</p>
+            <div class="tracker-btns-container">
+              <div class="start-tracking-btn">
+                <img
+                  src="img/start-tracker.png"
+                  class="tracker-btn img-start"
+                  alt=""
+                />
+              </div>
+              <div class="start-tracking-btn">
+                <img
+                  src="img/pause-tracker.png"
+                  class="tracker-btn img-start"
+                  alt=""
+                />
+              </div>
+              <div class="start-tracking-btn">
+                <img
+                  src="img/stop-tracker.png"
+                  class="tracker-btn img-start"
+                  alt=""
+                />
+              </div>
+              <div class='timer'>00:42</div>
+            </div>
 
-   <script src="script.js"></script>
-   <script src="calculator.js"></script>
-   <script src="text-checker.js"></script>
-   <script src="task-tracker.js"></script>
-    
-</body>
+            <div class='task-description'>
+              <p>Task description:</p>
+              <textarea placeholder="✒" name="" id="task-description" rows="3"></textarea>
+            </div>
+          </div>
+
+          <div class="calculator-history task-tracker-history">
+            <h3>History:</h3>
+
+            <div class="history-area">
+              
+         <div class='history-row'>
+          
+          <div class='history-item1'>Worked on the task tracker</div>
+          <div class=time-delete-row>
+            <div class='time-and-remove-part'>
+                <span class='time'>00:42:10</span>
+                <span class='delete'><img
+                  src="img/start-tracker.png"
+                  class="trash-icon"
+                  alt=""
+                /></span>
+                <span class='delete'><img class="trash-icon" src="img/edit-icon.png" alt=""></span>
+                <span class='delete'><img class="trash-icon" src="img/2907762.png" alt=""></span>
+            </div>
+        </div> </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+     
+
+    <script src="script.js"></script>
+    <script src="calculator.js"></script>
+    <script src="text-checker.js"></script>
+    <script src="task-tracker.js"></script>
+  </body>
 </html>
