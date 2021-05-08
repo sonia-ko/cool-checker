@@ -23,7 +23,7 @@ const handleHover = function (e) {
     const siblings = activeItem
       .closest(".sidenav")
       .querySelectorAll(".nav-item");
-    console.log(siblings);
+
     siblings.forEach((el) => {
       if (el !== e.target) el.style.opacity = this;
     });

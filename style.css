@@ -308,7 +308,8 @@ td {
   align-self: flex-end;
 }
 
-.calculator-history {
+.calculator-history,
+.task-tracker-history {
   width: 60%;
   font-size: 1.3rem;
   align-self: flex-start;
@@ -316,7 +317,8 @@ td {
   margin: 0.15rem 0;
 }
 
-.history-item1 {
+.history-item1,
+.tracker-history-item1 {
   background-color: #dedfff;
   padding: 1rem;
   margin: 0.3rem;
@@ -339,7 +341,8 @@ h3 {
   opacity: 1;
 }
 
-.history-row {
+.history-row,
+.tracker-history-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -350,19 +353,22 @@ h3 {
 .history-row + .history-row {
   margin-top: 0.2rem;
 }
-.time-and-remove-part {
+.time-and-remove-part,
+.tracker-time-and-remove-part {
   display: flex;
   align-items: center;
 }
 .time {
   padding-right: 1em;
 }
-.time-delete-row {
+.time-delete-row,
+.tracker-time-delete-row {
   background-color: #dedfff;
   color: #6a7475;
 }
 
-.history-area {
+.history-area,
+.tracker-history-area {
   max-height: 28.45rem;
   display: block;
   overflow-y: scroll;
